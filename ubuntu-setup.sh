@@ -7,6 +7,7 @@ cd /home/ansibleadmin
 # update
 sudo apt-get update
 sudo apt upgrade -y
+sudo apt autoremove --assume-ye
 sudo apt install python3-pip
 
 # install ansible
