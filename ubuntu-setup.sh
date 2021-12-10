@@ -18,3 +18,5 @@ sudo apt install python3-pip --assume-yes
 sudo python3 -m venv venv
 
 sudo chown ansibleadmin /home/ansibleadmin --recursive
+
+pip3 install -r ansible[azure]
