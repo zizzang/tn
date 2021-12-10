@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# setting
+sudo yum update -y
 
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt autoremove --assume-yes
-sudo apt install python3-pip -y
-pip3 install --upgrade pip
+sudo yum install -y python3-pip
+
+sudo pip3 install --upgrade pip
+
 pip3 install "ansible==2.9.17"
+
 pip3 install ansible[azure]
