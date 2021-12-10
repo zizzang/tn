@@ -1,11 +1,23 @@
 #!/bin/bash
 
-sudo yum update -y
+cd /home/ansibleadmin
 
-sudo yum install -y python3-pip
+sudo apt-get update
+sudo apt upgrade -y
 
-sudo pip3 install --upgrade pip
+sudo apt autoremove --assume-yes
 
-pip3 install "ansible==2.9.17"
+sudo apt install git --assume-yes
 
-pip3 install ansible[azure]
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+sudo apt install python3-venv --assume-yes
+
+sudo apt install python3-pip --assume-yes
+
+sudo python3 -m venv venv
+
+sudo chown ansibleadmin /home/ansibleadmin --recursive
+
+pip3 install -r https://raw.githubusercontent.com/globalbao/terraform-azurerm-ansible-linux-vm/master/scripts/requirements-ansible.txt
+pip3 install -r https://raw.githubusercontent.com/globalbao/terraform-azurerm-ansible-linux-vm/master/scripts/requirements-azure.txt
