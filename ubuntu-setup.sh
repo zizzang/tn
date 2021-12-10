@@ -18,6 +18,3 @@ sudo apt install python3-pip --assume-yes
 sudo python3 -m venv venv
 
 sudo chown ansibleadmin /home/ansibleadmin --recursive
-
-pip3 install -r https://raw.githubusercontent.com/globalbao/terraform-azurerm-ansible-linux-vm/master/scripts/requirements-ansible.txt
-pip3 install -r https://raw.githubusercontent.com/globalbao/terraform-azurerm-ansible-linux-vm/master/scripts/requirements-azure.txt
