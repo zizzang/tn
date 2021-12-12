@@ -18,5 +18,8 @@ sudo python3 -m venv venv
 
 sudo chown ansibleadmin /home/ansibleadmin --recursive
 
-pip3 install -r https://raw.githubusercontent.com/zizzang/tn/main/requirements-ansible.txt
-pip3 install -r https://raw.githubusercontent.com/zizzang/tn/main/requirements-azure.txt
+ansible-galaxy collection install azure.azcollection
+
+wget https://raw.githubusercontent.com/ansible-collections/azure/dev/requirements-azure.txt
+
+sudo pip3 install -r requirements-azure.txt
