@@ -18,8 +18,6 @@ sudo python3 -m venv venv
 
 sudo chown ansibleadmin /home/ansibleadmin --recursive
 
-ansible-galaxy collection install azure.azcollection
+pip3 install ansible==2.9.17
 
-wget https://raw.githubusercontent.com/ansible-collections/azure/dev/requirements-azure.txt
-
-sudo pip3 install -r requirements-azure.txt
+pip3 install ansible[azure]
